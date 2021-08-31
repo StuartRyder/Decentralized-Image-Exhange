@@ -90,7 +90,14 @@ class App extends Component {
     this.setState({ loading: false })
     })
   }
-
+  
+  buyToken = async (Tokens) =>{
+    this.setState({ loading: true })
+    console.log("working till here")  ////////////
+    const myId = await this.state.dstock.methods.buyToken(Tokens).send({ from: this.state.account,value: number });
+    this.setState({ loading: false })
+    console.log("not working")   /////////////
+  }
   // showUploads = () =>{
       
   // }

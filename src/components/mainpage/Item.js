@@ -1,12 +1,12 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardHeader from "@material-ui/core/CardHeader";
+import CardMedia from "@material-ui/core/CardMedia";
+import CardContent from "@material-ui/core/CardContent";
+import CardActions from "@material-ui/core/CardActions";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
 import "../center.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -15,20 +15,16 @@ const useStyles = makeStyles((theme) => ({
   },
   media: {
     height: 0,
-    paddingTop: '56.25%', // 16:9
+    paddingTop: "56.25%", // 16:9
   },
 }));
 
 export default function Item(props) {
   const classes = useStyles();
 
-
   return (
-    <Card className={classes.root} style={{background:"lightgrey"}} >
-      <CardHeader
-        title="IIITM Gwalior"
-        subheader="Shrey Gupta"
-      />
+    <Card className={classes.root} style={{ background: "lightgrey" }}>
+      <CardHeader title="IIITM Gwalior" subheader="Anurag Srivastava" />
       <CardMedia
         className={classes.media}
         // image="../../../public/idea.jpeg"
@@ -37,15 +33,20 @@ export default function Item(props) {
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          Atal Bihari Vajpayee Indian Institute of Information Technology, Gwalior 
+          Atal Bihari Vajpayee Indian Institute of Information Technology,
+          Gwalior
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-      <Button size="small" color="primary" className="centered_ph" onClick={props.buyAsset}>
+        <Button
+          size="small"
+          color="primary"
+          className="centered_ph"
+          onClick={props.buyAsset}
+        >
           Buy now
-      </Button>
+        </Button>
       </CardActions>
-
     </Card>
   );
 }
